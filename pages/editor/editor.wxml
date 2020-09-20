@@ -1,0 +1,31 @@
+  <!-- 绘图区域 -->
+<canvas class="myCancas" canvas-id="myCanvas" />
+
+  <!-- 选择区域 -->
+<view class="chooseBox">
+
+	<!-- 按钮区域 -->
+	<view class="choose">
+		<image src="/src/img/cperson.png" alt="" bindtap="show" data-id="0"></image>
+		<image src="/src/img/cclothes.png" alt="" bindtap="show" data-id="1"></image>
+		<image src="/src/img/chair.png" alt="" bindtap="show" data-id="2"></image>
+		<image src="/src/img/cpeishi.png" alt="" bindtap="show" data-id="3"></image>
+	</view>
+
+	<!-- 展示区域 -->
+	<view class="box">
+
+		<view wx:for="{{clothesList}}" wx:key="item">
+			<image src="{{item}}" data-id="{{item}}" bindtap="clickImg"></image>
+			<!-- <view>{{item}}</view> -->
+		</view>
+	</view>
+</view>
+
+
+
+<view>
+	<button bindtap='getNew'>换一换</button>
+	<button bindtap='saveimage' type="primary">保存到相册</button>
+
+</view>
